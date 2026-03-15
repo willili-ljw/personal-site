@@ -1,4 +1,5 @@
 import dayjs from 'dayjs';
+import type { ReactNode } from 'react';
 
 import MarkdownRenderer from '@/components/MarkdownRenderer';
 import type { Position } from '@/data/resume/work';
@@ -39,10 +40,10 @@ export default function Job({ data }: JobProps) {
                 },
               },
               code: {
-                component: ({ children }) => <>{children}</>,
+                component: ({ children }: { children?: ReactNode }) => <>{children}</>,
               },
               pre: {
-                component: ({ children }) => <>{children}</>,
+                component: ({ children }: { children?: ReactNode }) => <>{children}</>,
               },
             },
           }}
