@@ -12,117 +12,49 @@ export interface Category {
 }
 
 const skills: Skill[] = [
-  // Languages
   {
     title: 'Python',
     competency: 5,
-    category: ['Languages', 'ML Engineering'],
-  },
-  {
-    title: 'TypeScript',
-    competency: 5,
-    category: ['Languages', 'Web Development'],
-  },
-  {
-    title: 'SQL',
-    competency: 4,
-    category: ['Languages', 'Databases'],
-  },
-  // AI & LLM
-  {
-    title: 'AI Agents',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'LLM Evaluation',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'AI Red-teaming',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'LLM APIs',
-    competency: 5,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'RAG',
-    competency: 4,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'Prompt Engineering',
-    competency: 4,
-    category: ['ML Engineering'],
-  },
-  {
-    title: 'Vector Databases',
-    competency: 4,
-    category: ['ML Engineering', 'Databases'],
+    category: ['Languages', 'Data Science'],
   },
   {
     title: 'PyTorch',
-    competency: 4,
-    category: ['ML Engineering'],
+    competency: 5,
+    category: ['Machine Learning', 'Astrophysics'],
   },
   {
     title: 'Pandas',
     competency: 5,
-    category: ['ML Engineering', 'Data Engineering'],
+    category: ['Data Science', 'Data Engineering'],
   },
-  // Web Development
   {
-    title: 'Node.js',
+    title: 'SQL / ADQL',
     competency: 5,
-    category: ['Web Development'],
+    category: ['Data Science', 'Databases'],
   },
   {
-    title: 'FastAPI',
+    title: 'Matplotlib / Seaborn',
     competency: 4,
-    category: ['Web Development'],
+    category: ['Data Visualization'],
   },
   {
-    title: 'Next.js',
-    competency: 3,
-    category: ['Web Development'],
-  },
-  // Databases
-  {
-    title: 'PostgreSQL',
+    title: 'Machine Learning',
     competency: 4,
-    category: ['Databases'],
+    category: ['Machine Learning'],
   },
   {
-    title: 'Redis',
-    competency: 3,
-    category: ['Databases'],
-  },
-  // Infrastructure
-  {
-    title: 'AWS',
+    title: 'Time-Series Analysis',
     competency: 4,
-    category: ['Infrastructure'],
+    category: ['Astrophysics', 'Data Science'],
   },
   {
-    title: 'Docker',
+    title: 'Git',
     competency: 4,
-    category: ['Infrastructure'],
+    category: ['Tools'],
   },
-  {
-    title: 'Kubernetes',
-    competency: 3,
-    category: ['Infrastructure'],
-  },
-  {
-    title: 'Observability',
-    competency: 4,
-    category: ['Infrastructure', 'ML Engineering'],
-  },
-].map((skill) => ({ ...skill, category: skill.category.sort() }));
+];
+
+const normalizedSkills: Skill[] = skills.map((skill) => ({ ...skill, category: skill.category.sort() }));
 
 /**
  * Category colors with pre-computed text contrast.
@@ -184,6 +116,6 @@ function buildCategories(skillsList: Skill[]): Category[] {
   });
 }
 
-const categories: Category[] = buildCategories(skills);
+const categories: Category[] = buildCategories(normalizedSkills);
 
-export { categories, skills };
+export { categories, normalizedSkills as skills };

@@ -13,9 +13,9 @@ import { categories, skills } from '@/data/resume/skills';
 import work from '@/data/resume/work';
 
 export const metadata: Metadata = {
-  title: 'Resume',
+  title: 'William Li - Resume',
   description:
-    "Michael D'Angelo's Resume. Promptfoo, Smile ID, Arthena, Matroid, Stanford ICME, YC alum.",
+    'Resume for William Li, UC Berkeley Data Science + Astrophysics student and research collaborator.',
 };
 
 export default function ResumePage() {

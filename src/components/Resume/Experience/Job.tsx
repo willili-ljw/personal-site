@@ -1,6 +1,6 @@
 import dayjs from 'dayjs';
-import Markdown from 'markdown-to-jsx';
 
+import MarkdownRenderer from '@/components/MarkdownRenderer';
 import type { Position } from '@/data/resume/work';
 
 interface JobProps {
@@ -30,7 +30,7 @@ export default function Job({ data }: JobProps) {
         </p>
       </header>
       {summary ? (
-        <Markdown
+        <MarkdownRenderer
           options={{
             overrides: {
               p: {
@@ -48,7 +48,7 @@ export default function Job({ data }: JobProps) {
           }}
         >
           {summary}
-        </Markdown>
+        </MarkdownRenderer>
       ) : null}
       {highlights ? (
         <ul className="points">

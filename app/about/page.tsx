@@ -1,6 +1,6 @@
-import Markdown from 'markdown-to-jsx';
 import type { Metadata } from 'next';
 
+import MarkdownRenderer from '@/components/MarkdownRenderer';
 import PageWrapper from '@/components/Template/PageWrapper';
 import { aboutMarkdown } from '@/data/about';
 
@@ -24,7 +24,7 @@ export default function AboutPage() {
           </p>
         </header>
         <article className="about-content">
-          <Markdown>{aboutMarkdown}</Markdown>
+          <MarkdownRenderer>{aboutMarkdown}</MarkdownRenderer>
         </article>
       </section>
     </PageWrapper>
